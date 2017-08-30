@@ -19,6 +19,8 @@ app.set("view engine", "handlebars");
 
 app.use(express.static("./public"));
 
+require('./routes/homepage-routes.js')(app);
+
 app.listen(PORT, function() {
   console.log("Listening on PORT " + PORT);
 });
