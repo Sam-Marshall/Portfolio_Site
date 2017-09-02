@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
-    $('.button-collapse').sideNav();
+    $('.button-collapse').sideNav({
+    	closeOnClick: true
+    });
     $('.parallax').parallax();
-    
+    $('.toggle-close').sideNav('hide');
+
     //Smooth Scrolling Functionality
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') ||
@@ -12,7 +15,7 @@ $(document).ready(function() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top
+                    scrollTop: target.offset().top - 100
                 }, 1000);
                 return false;
             }
