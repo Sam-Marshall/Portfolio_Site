@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var exphbs = require("express-handlebars");
 var path = require("path");
 var nodemailer = require("nodemailer");
+// require('dotenv').config();
 
 var app = express();
 var PORT = process.env.PORT || 8080;
