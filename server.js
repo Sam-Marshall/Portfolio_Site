@@ -2,9 +2,19 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require("express-handlebars");
 var path = require("path");
+var nodemailer = require("nodemailer");
 
 var app = express();
 var PORT = process.env.PORT || 8080;
+
+var smtpTransport = nodemailer.createTransport({
+    service: "gmail",
+    host: "smtp.gmail.com",
+    auth: {
+      user: password.user,
+      pass: password.pass
+    }
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

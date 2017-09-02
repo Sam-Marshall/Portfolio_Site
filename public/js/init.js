@@ -3,9 +3,12 @@ $(document).ready(function() {
     $('.button-collapse').sideNav({
     	closeOnClick: true
     });
-    $('.parallax').parallax();
     $('.toggle-close').sideNav('hide');
+    $('.parallax').parallax();
 
+    $('#send-email').on('click', function(event){
+    	event.preventDefault();
+    })
     //Smooth Scrolling Functionality
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') ||

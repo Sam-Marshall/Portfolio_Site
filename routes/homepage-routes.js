@@ -16,4 +16,23 @@ module.exports = function(app) {
         res.render('contact');
     });
 
+    app.post("/sendemail", function(req, res) {
+    var mailOptions = {
+        to: "rkpalmore@gmail.com",
+        subject: "Hey! Saw Your Profile",
+        text: req.body.text,
+        html: "<b>Sender: </b>" + req.body.from + "<br> <b>Email: </b>" + req.body.address + "<p>" + "<hr />" + req.body.text + "</p>"
+    }
+    console.log("Message: " + mailOptions.text);
+    smtpTransport.sendMail(mailOptions, function(error, response) {
+        if (error) {
+            console.log(error);
+            res.end("error");
+        } else {
+            console.log("Message successfully sent from: " + req.body.address);
+            res.send("banana");
+        }
+    });
+});
+
 }
