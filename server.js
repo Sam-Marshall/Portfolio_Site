@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var exphbs = require("express-handlebars");
 var path = require("path");
 var nodemailer = require("nodemailer");
+var password = require("./secret.js")
 
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -29,7 +30,7 @@ app.set("view engine", "handlebars");
 
 app.use(express.static("./public"));
 
-require('./routes/homepage-routes.js')(app);
+require('./routes/homepage-routes.js')(app, smtpTransport);
 
 app.listen(PORT, function() {
   console.log("Listening on PORT " + PORT);
