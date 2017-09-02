@@ -3,21 +3,23 @@ var bodyParser = require('body-parser');
 var exphbs = require("express-handlebars");
 var path = require("path");
 var nodemailer = require("nodemailer");
-var password = require("./secret.js")
+var password;
 
 var app = express();
 var PORT = process.env.PORT || 8080;
 
 if (!PORT === 8080) {
-	password = process.env
+    password = process.env
+} else {
+	password = require("./secret.js")
 };
 
 var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
     auth: {
-      user: password.user,
-      pass: password.pass
+        user: password.user,
+        pass: password.pass
     }
 });
 
@@ -37,5 +39,5 @@ app.use(express.static("./public"));
 require('./routes/homepage-routes.js')(app, smtpTransport);
 
 app.listen(PORT, function() {
-  console.log("Listening on PORT " + PORT);
+    console.log("Listening on PORT " + PORT);
 });
