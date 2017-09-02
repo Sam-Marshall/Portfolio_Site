@@ -1,4 +1,7 @@
 /* Custom Stylesheet */
+body{
+    min-width: 445px;
+}
 
 nav ul a,
 nav .brand-logo {
