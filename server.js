@@ -8,6 +8,10 @@ var password = require("./secret.js")
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+if (!PORT === 8080) {
+	password = process.env
+};
+
 var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
