@@ -3,15 +3,15 @@ var bodyParser = require('body-parser');
 var exphbs = require("express-handlebars");
 var path = require("path");
 var nodemailer = require("nodemailer");
-var password;
 
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-if (!PORT === 8080) {
-    password = process.env
+if (PORT === 8080) {
+    var password = require("./secret.js");
 } else {
-	password = require("./secret.js")
+    console.log("Heroku connection");
+    var password = process.env
 };
 
 var smtpTransport = nodemailer.createTransport({
