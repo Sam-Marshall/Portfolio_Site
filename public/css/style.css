@@ -1,5 +1,6 @@
 /* Custom Stylesheet */
-body{
+
+body {
     min-width: 445px;
 }
 
@@ -17,7 +18,7 @@ p {
 }
 
 .parallax-container {
-    min-height: 380px;
+    min-height: 600px;
     line-height: 0;
     height: auto;
     color: rgba(255, 255, 255, .9);
@@ -48,12 +49,12 @@ p {
     height: auto;
 }
 
-.portfolio{
+.portfolio {
     width: 100%;
     height: auto;
 }
 
-.project_title{
+.project_title {
     color: white;
     background: #26a69a;
 }
@@ -64,6 +65,11 @@ p {
 
 .icon-block .material-icons {
     font-size: inherit;
+}
+
+.image1 {
+    width: 105%;
+    height: 110%;
 }
 
 footer.page-footer {
