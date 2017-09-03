@@ -23,8 +23,13 @@ header ul li:hover {
 p {
     line-height: 2rem;
 }
-.section-heading{
+
+.section-heading {
     color: rgba(255, 61, 61, .75);
+    text-shadow: -1px -1px 0 rgba(237, 237, 237, 1),
+    1px -1px 0 rgba(237, 237, 237, 1),
+    -1px 1px 0 rgba(237, 237, 237, 1),
+    1px 1px 0 rgba(237, 237, 237, 1);
 }
 
 .button-collapse {
@@ -115,6 +120,13 @@ p {
     1px 1px 0 rgba(255, 61, 61, 0.15);
 }
 
+.heading-title {
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.15),
+    1px -1px 0 rgba(255, 255, 255, 0.15),
+    -1px 1px 0 rgba(255, 255, 255, 0.15),
+    1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
 
 
 /* The typing effect */
@@ -127,7 +139,6 @@ p {
         width: 100%
     }
 }
-
 
 
 /* The typewriter cursor effect */
