@@ -1,7 +1,7 @@
 /* Custom Stylesheet */
 
 body {
-    min-width: 445px;
+    min-width: 500px;
 }
 
 nav ul a,
@@ -9,8 +9,22 @@ nav .brand-logo {
     color: #444;
 }
 
+nav div ul li:hover {
+    background-color: rgba(255, 160, 160, 0.05);
+    border-bottom-color: rgba(255, 61, 61, .75);
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+
+header ul li:hover {
+    background-color: rgba(255, 61, 61, 0.25);
+}
+
 p {
     line-height: 2rem;
+}
+.section-heading{
+    color: rgba(255, 61, 61, .75);
 }
 
 .button-collapse {
@@ -82,7 +96,7 @@ p {
 .typewriter h4 {
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
-    border-right: .10em solid orange;
+    border-right: .10em solid rgba(255, 61, 61, 0.35);
     /* The typwriter cursor */
     white-space: nowrap;
     /* Keeps the content on a single line */
@@ -93,6 +107,14 @@ p {
     animation: typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
+
+.text-outline {
+    text-shadow: -1px -1px 0 rgba(255, 61, 61, 0.15),
+    1px -1px 0 rgba(255, 61, 61, 0.15),
+    -1px 1px 0 rgba(255, 61, 61, 0.15),
+    1px 1px 0 rgba(255, 61, 61, 0.15);
+}
+
 
 
 /* The typing effect */
@@ -107,6 +129,7 @@ p {
 }
 
 
+
 /* The typewriter cursor effect */
 
 @keyframes blink-caret {
@@ -115,7 +138,7 @@ p {
         border-color: transparent
     }
     50% {
-        border-color: orange;
+        border-color: rgba(255, 61, 61, 0.75);
     }
 }
 
