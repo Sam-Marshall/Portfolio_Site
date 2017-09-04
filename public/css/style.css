@@ -98,6 +98,17 @@ p {
     height: 90%;
 }
 
+.profile-picture{
+    width: 75%;
+    border-style: solid;
+    border-width: 15px;
+    border-radius: 5px;
+    border-top-color: rgba(255, 61, 61, .5);
+    border-bottom-color: rgba(255, 61, 61, .5);
+    border-left-color: rgba(0,150,136, .5);
+    border-right-color: rgba(0,150,136, .5);
+}
+
 .typewriter h4 {
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
