@@ -6,6 +6,19 @@ $(document).ready(function() {
     $('.toggle-close').sideNav('hide');
     $('.parallax').parallax();
 
+    var options = {
+        strings: ["Hi, I'm Stacy and I build interactive web applications from the ground up. ^1000"],
+        typeSpeed: 60,
+        backSpeed: 35,
+        smartBackspace: true,
+        fadeOut: true,
+        loop: true,
+        showCursor: false
+    }
+
+    var typed = new Typed(".typed", options);
+
+
     //Send Email Functionality (using npm nodemailer)
     $('#send-email').on('click', function(event) {
         event.preventDefault();
@@ -51,6 +64,21 @@ $(document).ready(function() {
                 return false;
             }
         }
+    });
+
+    //Highlight menu option upon scroll
+    $(window).scroll(function() {
+        var position = $(this).scrollTop();
+
+        $('.section').each(function() {
+            var target = $(this).offset().top - 120;
+            var id = $(this).attr('id');
+
+            if (position >= target) {
+                $('#navigation > ul > li > a').removeClass('active');
+                $('#navigation > ul > li > a[href=#' + id + ']').addClass('active');
+            }
+        });
     });
 
     function clearMessage() {
