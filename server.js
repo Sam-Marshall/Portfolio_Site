@@ -8,19 +8,19 @@ var nodemailer = require("nodemailer");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-if (PORT === 8080) {
-    var password = require("./secret.js");
-} else {
-    console.log("Heroku connection");
-    var password = process.env
-};
+// if (PORT === 8080) {
+//     var password = require("./secret.js");
+// } else {
+//     console.log("Heroku connection");
+//     var password = process.env
+// };
 
 var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
     auth: {
-        user: password.user,
-        pass: password.pass
+        user: "janeeverywomen@gmail.com",
+        pass: "HelloWorld"
     }
 });
 
