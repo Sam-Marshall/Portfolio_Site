@@ -9,6 +9,11 @@ nav .brand-logo {
     color: #444;
 }
 
+nav div ul li,
+nav div ul {
+    transition: 0.5s;
+}
+
 nav div ul li:hover,
 nav div ul .active {
     background-color: rgba(255, 160, 160, 0.05);
@@ -27,6 +32,7 @@ p {
 
 .section-heading {
     color: rgba(255, 61, 61, .75);
+    opacity: 0.8;
     text-shadow: -1px -1px 0 rgba(237, 237, 237, 1),
     1px -1px 0 rgba(237, 237, 237, 1),
     -1px 1px 0 rgba(237, 237, 237, 1),
@@ -110,18 +116,29 @@ p {
     border-right-color: rgba(0, 150, 136, .5);
 }
 
+
 /*.typewriter h4 {
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
-    /*border-right: .10em solid rgba(255, 61, 61, 0.35);
+
+
+/*border-right: .10em solid rgba(255, 61, 61, 0.35);
     /* The typwriter cursor */
-    /*white-space: nowrap;
+
+
+/*white-space: nowrap;
     /* Keeps the content on a single line */
-    /*margin: 0 auto;
+
+
+/*margin: 0 auto;
     /* Gives that scrolling effect as the typing happens */
-    /*letter-spacing: .05em;
+
+
+/*letter-spacing: .05em;
     /* Adjust as needed */
-    /*animation: typing 3.5s steps(40, end),
+
+
+/*animation: typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }*/
 
@@ -139,8 +156,14 @@ p {
     1px 1px 0 rgba(255, 255, 255, 0.15);
 }
 
+#linkedInName {
+    opacity: 0.9;
+    transition: 1s;
+}
 
-
+#linkedInName:hover {
+    opacity: 0.5;
+}
 
 /* The typing effect */
 
@@ -152,8 +175,6 @@ p {
         width: 100%
     }
 }
-
-
 
 /* The typewriter cursor effect */
 
